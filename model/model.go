@@ -68,6 +68,8 @@ type SystemInstall struct {
 	LegacyBios        bool                   `yaml:"legacyBios,omitempty,flow"`
 	Environment       map[string]string      `yaml:"env,omitempty,flow"`
 	CryptPass         string                 `yaml:"-"`
+	MakeISO           bool                   `yaml:"iso,omitempty,flow"`
+	KeepImage         bool                   `yaml:"keepImage,omitempty,flow"`
 }
 
 // InstallHook is a commands to be executed in a given point of the install process

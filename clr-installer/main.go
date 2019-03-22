@@ -214,6 +214,14 @@ func main() {
 		md.SwupdMirror = options.SwupdMirror
 	}
 
+	// Command line overrides the configuration file
+	if options.MakeISOSet {
+		md.MakeISO = options.MakeISO
+	}
+	if options.KeepImageSet {
+		md.KeepImage = options.KeepImage
+	}
+
 	if !options.StubImage {
 		// Now validate the mirror from the config or command line
 		if md.SwupdMirror != "" {
