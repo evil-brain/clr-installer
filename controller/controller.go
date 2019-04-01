@@ -470,7 +470,7 @@ func contentInstall(rootDir string, version string, model *model.SystemInstall, 
 	msg := "Installing the base system"
 	prg := progress.NewLoop(msg)
 	log.Info(msg)
-	if err := sw.Verify(version, model.SwupdMirror); err != nil {
+	if err := sw.Verify(version, model.SwupdMirror, false); err != nil {
 		return prg, err
 	}
 
